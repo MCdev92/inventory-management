@@ -30,10 +30,10 @@ const style = {
   bgcolor: 'white',
   border: '2px solid #000',
   boxShadow: 24,
-  p: 4,
+  p: 2,
   display: 'flex',
   flexDirection: 'column',
-  gap: 3,
+  gap: 2,
 };
 
 // Main component function
@@ -197,7 +197,7 @@ export default function Home() {
         fullWidth
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
-        sx={{ mb: 2, maxWidth: '200px' }}
+        sx={{ mb: 2, width: { xs: '100%', sm: '80%', md: '8%' } }}
       />
       <Button variant="contained" onClick={handleOpen} sx={{ mb: 2 }}>
         Add New Item
@@ -233,6 +233,8 @@ export default function Home() {
                   display="flex"
                   justifyContent="space-between"
                   alignItems="center"
+                  flexDirection={{ xs: 'column', sm: 'row' }}
+                  gap={2}
                 >
                   <Box display="flex" alignItems="center" gap={2}>
                     {imageUrl && <img src={imageUrl} alt={name} style={{ width: 50, height: 50, objectFit: 'cover' }} />}
@@ -243,7 +245,7 @@ export default function Home() {
                   <Typography variant="h6" color="#333">
                     Quantity: {quantity}
                   </Typography>
-                  <Box display="flex" alignItems="center">
+                  <Box display="flex" alignItems="center" gap={1}>
                     <IconButton onClick={() => addItem(name, 1)}>
                       <AddIcon />
                     </IconButton>
