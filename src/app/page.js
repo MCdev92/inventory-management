@@ -142,7 +142,7 @@ export default function Home() {
         fullWidth
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
-        sx={{ marginBottom: 2, width: '15%' }}
+        sx={{ marginBottom: 2, width: '10%' }}
       />
       <Button variant="contained" onClick={handleOpen} sx={{ mb: 2 }}>
         Add New Item
