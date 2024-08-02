@@ -116,7 +116,7 @@ export default function Home() {
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Add Item
           </Typography>
-          <Stack width="100%" direction="row" spacing={2}>
+          <Stack width="100%" spacing={2}>
             <TextField
               id="outlined-basic"
               label="Item"
@@ -137,6 +137,7 @@ export default function Home() {
             <Button
               variant="outlined"
               component="label"
+              fullWidth
             >
               Upload Image
               <input
@@ -146,7 +147,7 @@ export default function Home() {
               />
             </Button>
             <Button
-              variant="outlined"
+              variant="contained"
               onClick={() => {
                 addItem(itemName, itemAmount, itemImage);
                 setItemName('');
@@ -154,8 +155,9 @@ export default function Home() {
                 setItemImage(null);
                 handleClose();
               }}
+              fullWidth
             >
-              Add
+              Add Item
             </Button>
           </Stack>
         </Box>
